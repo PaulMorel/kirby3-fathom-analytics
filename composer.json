@@ -1,0 +1,15 @@
+{
+    "name": "paulmorel/fathom-analytics",
+    "description": "Kirby Example Plugin",
+    "type": "kirby-plugin",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Paul Morel",
+            "email": "paul@paulmorel.com"
+        }
+    ],
+    "require": {
+        "getkirby/composer-installer": "^1.1"
+    }
+}
