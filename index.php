@@ -1,10 +1,7 @@
 <?php
-
 Kirby::plugin('paulmorel/fathom-analytics', [
 	'options' => [
         'siteId' => '',
-        // 'sharePassword' => '',
-        // 'customDomain' => '',
 	],
     'snippets' => [
         'fathom-analytics-embed' => __DIR__ . '/snippets/embed.php'
