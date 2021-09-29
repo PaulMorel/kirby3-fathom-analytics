@@ -4,7 +4,7 @@ Kirby::plugin('paulmorel/fathom-analytics', [
         'siteId' => '',
 	],
     'snippets' => [
-        'fathom-analytics-embed' => __DIR__ . '/snippets/embed.php'
+        'fathom-analytics-embed' => __DIR__ . '/snippets/fathom-analytics-embed.php'
     ],
     'api' => [
         'routes' => [

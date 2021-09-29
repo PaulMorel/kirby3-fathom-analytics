@@ -65,6 +65,19 @@ return [
 
 ### Embedding the tracking code
 
+The tracking code is provided as a snippet, so it can be simply embedded in the `<head>` tag with the `snippet()` helper function.
+
+If no `siteId` is provided, the snippet does nothing.
+
+
+```php
+<head>
+    <!-- ... -->
+    <php snippet('fathom-analytics-embed'); ?>
+    <!-- ... -->
+</head>
+```
+
 ## Options
 
 ### `siteId` (Required)
