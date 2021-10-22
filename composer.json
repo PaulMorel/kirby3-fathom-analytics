@@ -1,6 +1,6 @@
 {
     "name": "paulmorel/fathom-analytics",
-    "version": "0.0.2",
+    "version": "1.0.0",
     "description": "A Kirby 3 plugin for integrating the Fathom Analytics service to your site.",
     "type": "kirby-plugin",
     "license": "MIT",

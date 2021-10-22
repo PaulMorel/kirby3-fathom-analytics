@@ -1,6 +1,9 @@
 # Kirby Fathom Analytics
+![GitHub release (latest by date)](https://img.shields.io/github/v/release/paulmorel/kirby3-fathom-analytics)
+![Kirby CMS Version](https://img.shields.io/badge/Kirby-v3.4.0+-informational)
+![License](https://img.shields.io/github/license/paulmorel/kirby3-fathom-analytics)
 
-A Kirby 3 plugin for integrating the [Fathom Analytics](https://usefathom.com/) service to your site.
+A Kirby 3 plugin for integrating the privacy focused [Fathom Analytics](https://usefathom.com/) service to your site.
 
 ## Main Feautres
 
@@ -10,7 +13,7 @@ This plugin does two things:
 - It provides a snippet to embed the Fathom Analytics tracking code 
 
 ## Requirements
-- Kirby CMS v3.5
+- Kirby CMS v3.4.0+
 
 
 ## Installation
@@ -78,6 +81,11 @@ If no `siteId` is provided, the snippet does nothing.
 </head>
 ```
 
+### Viewing your stats
+
+The plugin provides a panel view that loads your site's analytics dashboard in an iframe. Simply open the menu in the panel's top bar and click on Analytics.
+
+
 ## Options
 
 ### `siteId` (Required)
@@ -98,6 +106,23 @@ Example:
 'customDomain' => 'https://armadillo.example.com'
 ```
 
+### `disableForRole`
+
+Allows you to disable the tracking code for logged in users with the specified roles. Expects an `Array`. Defaults to `['admin']`.
+
+Examples:
+```php
+'disableForRole' => [
+    'admin'
+],
+```
+```php
+'disableForRole' => [
+    'admin',
+    'editor',
+    'translator'
+],
+```
 ## Disclaimer
 
 This plugin is provided "as is" with no guarantee. Use it at your own risk and always test it yourself before using it in a production environment. If you find any issues, please create a new issue.
