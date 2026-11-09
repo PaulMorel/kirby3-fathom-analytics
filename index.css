@@ -1,1 +1,40 @@
-.fathom-analytics-iframe[data-v-baab02]{width:1px;min-height:400px;border-radius:8px;min-width:100%}.fathom-analytics-loader[data-v-baab02]{z-index:1;animation:Spin .9s linear infinite}
+/*
+ * Fathom's shared dashboard can't report its height to the Panel, so the
+ * iframe can't grow to fit its content. The view fills the viewport under
+ * the header instead, and the dashboard scrolls inside its frame.
+ */
+.k-fathom-analytics-view .k-panel-main {
+  display: flex;
+  flex-direction: column;
+  height: 100dvh;
+  padding-bottom: var(--main-padding-inline);
+}
+
+.k-fathom-analytics-frame {
+  position: relative;
+  flex: 1 1 auto;
+  min-height: 32rem;
+  border-radius: var(--rounded-lg);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.k-fathom-analytics-frame iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.k-fathom-analytics-frame[data-loaded="true"] iframe {
+  opacity: 1;
+}
+
+.k-fathom-analytics-loader {
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  color: var(--color-text-dimmed);
+}
